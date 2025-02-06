@@ -10,7 +10,6 @@
 <div class="container mt-5">
   <h2 class="text-center">Stock Information</h2>
 
-  <!-- Form for single stock symbol -->
   <form id="singleStockForm" class="mb-4">
     <div class="form-group">
       <label for="symbol">Enter Stock Symbol:</label>
@@ -19,7 +18,6 @@
     <button type="submit" class="btn btn-primary">Get Stock Info</button>
   </form>
 
-  <!-- Form for multiple stock symbols -->
   <form id="multipleStockForm" class="mb-4">
     <div class="form-group">
       <label for="symbols">Enter Stock Symbols (comma-separated):</label>
@@ -28,7 +26,6 @@
     <button type="submit" class="btn btn-primary">Get Multiple Stock Info</button>
   </form>
 
-  <!-- Display stock information -->
   <div id="stockInfo" class="mt-4">
     <h3 class="text-center">Stock Details</h3>
     <ul class="list-group" id="stockDetails"></ul>
@@ -37,7 +34,6 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
-  // Handle single stock form submission
   $('#singleStockForm').on('submit', function(e) {
       e.preventDefault();
       const symbol = $('#symbol').val();
@@ -46,7 +42,6 @@
           .then(data => displayStockInfo([data]));
   });
 
-  // Handle multiple stocks form submission
   $('#multipleStockForm').on('submit', function(e) {
       e.preventDefault();
       const symbols = $('#symbols').val();
@@ -55,7 +50,6 @@
           .then(data => displayStockInfo(data));
   });
 
-  // Display stock information
   function displayStockInfo(stockList) {
       const stockDetails = $('#stockDetails');
       stockDetails.empty();
