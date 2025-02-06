@@ -55,6 +55,3 @@ https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=SYMBOL&in
 - Add historical stock data visualization.
 - Deploy the project to a cloud platform.
 
-## License
-This project is open-source and available under the MIT License.
-
